@@ -1,22 +1,8 @@
-HTTP Endpoint Health Checker
-Overview
-This script monitors the health of HTTP endpoints as specified in a YAML configuration file. It checks each endpoint's status and logs their availability over time.
-Requirements
-Python 3.x
-requests
-pyyaml
-Setup
-Install the required Python libraries:
-pip install requests pyyaml
-Configuration
-Create a YAML file with the list of endpoints to monitor. Example format:
-yaml
-	•	name: Example Endpoint url: https://example.com/api method: GET - name: Another Endpoint url: https://example.com/health method: POST headers: Content-Type: application/json body: '{"key": "value"}'
-Usage
-Run the script and enter the path to your configuration YAML file:
-bash
-python health_checker.py
-Output
-The script logs the status and availability percentage of each domain every 15 seconds.
-Termination
-To stop the script, use CTRL+C.
+Make sure you have python > 3.10
+
+1. Clone the repository
+2. Install requirements.txt using pip install -r requirements.txt
+3. Run health_checker.py, and it will prompt you to enter the path to endpoints.yaml
+4. Enter the endpoints.yaml path( Which is available in this Repo).
+5. This program runs forever, monitoring and logging the health of all the endpoints until a user manually stops it.
+6. To stop the program, enter CTRL+C
